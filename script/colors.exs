@@ -1,4 +1,4 @@
-Bunt.puts([:bright, :white, "# BACKGROUNDS" |> String.ljust(80)])
+Bunt.puts([:bright, :white, "# BACKGROUNDS" |> String.pad_trailing(80)])
 Bunt.puts()
 Bunt.puts("Use as a background color like this:")
 Bunt.puts()
@@ -16,7 +16,7 @@ Bunt.ANSI.color_tuples()
         [
           :"#{color}_background",
           :black,
-          "#{color}" |> String.ljust(14)
+          "#{color}" |> String.pad_trailing(14)
         ]
       ]
 
@@ -31,7 +31,7 @@ Bunt.ANSI.color_tuples()
 end)
 
 Bunt.puts()
-Bunt.puts([:bright, :white, "# COLORS" |> String.ljust(80)])
+Bunt.puts([:bright, :white, "# COLORS" |> String.pad_trailing(80)])
 Bunt.puts()
 Bunt.puts("Use as a color like this:")
 Bunt.puts()
@@ -48,7 +48,7 @@ Bunt.ANSI.color_tuples()
       [
         [
           :"#{color}",
-          "#{color}" |> String.ljust(14)
+          "#{color}" |> String.pad_trailing(14)
         ]
       ]
 
@@ -63,7 +63,7 @@ Bunt.ANSI.color_tuples()
 end)
 
 Bunt.puts()
-Bunt.puts([:bright, :white, "# ALIAS COLORS" |> String.ljust(80)])
+Bunt.puts([:bright, :white, "# ALIAS COLORS" |> String.pad_trailing(80)])
 Bunt.puts()
 Bunt.puts("Since these names are hard to remember, you can alias them in your config.exs:")
 Bunt.puts()
@@ -78,7 +78,7 @@ Bunt.puts("Use this to give your colors semantics. They get easier to change lat
 Bunt.puts()
 
 Bunt.puts()
-Bunt.puts([:bright, :white, "# COLORS WITH NAMES" |> String.ljust(80)])
+Bunt.puts([:bright, :white, "# COLORS WITH NAMES" |> String.pad_trailing(80)])
 Bunt.puts()
 
 Bunt.puts(
@@ -100,7 +100,7 @@ Bunt.ANSI.color_tuples()
         [
           [
             :"#{color}",
-            "#{name}" |> String.ljust(14)
+            "#{name}" |> String.pad_trailing(14)
           ]
         ]
   end
