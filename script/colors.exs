@@ -94,8 +94,8 @@ Bunt.puts()
 
 Bunt.ANSI.color_tuples()
 |> Enum.reduce([], fn {name, color, _code, _rgb_tuple}, acc ->
-  if name do
-    acc =
+  acc =
+    if name do
       acc ++
         [
           [
@@ -103,7 +103,9 @@ Bunt.ANSI.color_tuples()
             "#{name}" |> String.pad_trailing(14)
           ]
         ]
-  end
+    else
+      acc
+    end
 
   case rem(acc |> Enum.count(), 6) do
     5 ->
